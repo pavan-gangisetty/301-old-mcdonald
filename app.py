@@ -60,7 +60,7 @@ app.layout = html.Div(children=[
 @app.callback(Output('figure-1', 'figure'),
               [Input('submit-button','n_clicks')],
              [State('options-drop', 'value')])
-def make_figure(varname):
+def make_figure(n_clicks, varname):
     mygraphtitle = f'Exports of {varname} in 2011'
     mycolorscale = 'ylorrd' # Note: The error message will list possible color scales.
     mycolorbartitle = "Millions USD"
